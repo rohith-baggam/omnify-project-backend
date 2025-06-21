@@ -42,7 +42,13 @@ logging.basicConfig(filename="app.log")
 logger.setLevel(logging.DEBUG)
 
 # Application definition
-CUSTOM_APPS = ["userauth", "coreutils"]
+CUSTOM_APPS = [
+    "userauth",
+    "coreutils",
+    "store.bookings",
+    "store.classes",
+    "store.slots",
+]
 THIRD_PARTY_APPS = [
     # Add Third Party Apps installed
     "rest_framework",

@@ -74,11 +74,6 @@ def main() -> None:
             print(f"\nDuplicate class name found: '{class_name}'")
             for loc in locations:
                 print(f"  - {loc}")
-        # if len(locations) > 1:
-        #     duplicates_found: bool = True
-        #     print(f"\nDuplicate class name found: '{class_name}'")
-        #     for loc in locations:
-        #         print(f"  - {loc}")
 
     if duplicates_found:
         print("\nCommit blocked due to duplicate class names.")
