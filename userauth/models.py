@@ -58,7 +58,7 @@ class UserModel(AbstractBaseUser, PermissionsMixin):
         unique=True,
         primary_key=True,
         default=uuid.uuid1,
-        db_column="USER_AUTH_ID",
+        db_column="ID",
         editable=False,
     )
 
