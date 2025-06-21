@@ -43,8 +43,7 @@ class CoreGenericListAPIView(CoreGenericQueryset):
                 )
             # ? Get paginated queryset from CoreGenericQueryset
             queryset = self.filter_queryset(self.get_queryset())
-            paginated_queryset: QuerySet[Model] = self.paginate_queryset(
-                queryset)
+            paginated_queryset: QuerySet[Model] = self.paginate_queryset(queryset)
 
             # ? Prepare context for serializer (can include request/user/etc.)
             context: Dict[Any] = self.set_context_data()
@@ -99,8 +98,7 @@ class CoreGenericGetAPIView(CoreGenericQueryset, CoreGenericQuerysetInstance):
                 )
             # ? Fetch queryset or single object
             if self.many:
-                queryset: QuerySet[Model] = self.filter_queryset(
-                    self.get_queryset())
+                queryset: QuerySet[Model] = self.filter_queryset(self.get_queryset())
             else:
                 queryset: Model = self.get_object()
 

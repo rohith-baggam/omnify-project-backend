@@ -11,9 +11,7 @@ from userauth.api.v1.utils.user_login_utils import (
 from coreutils.utils.generics.serializers.mixins import (
     CoreGenericSerializerMixin,
 )
-from userauth.api.v1.utils.handlers.register_handler import (
-    UserAuthRegisterHandler
-)
+from userauth.api.v1.utils.handlers.register_handler import UserAuthRegisterHandler
 
 # Logger setup with application context
 logger: logging.LoggerAdapter = logging.LoggerAdapter(
@@ -34,8 +32,7 @@ class UserLoginWebTokenSerializer(JSONWebTokenSerializer):
     )
 
     # Fields required for user authentication
-    email: str = serializers.EmailField(
-        required=True, help_text="User email address.")
+    email: str = serializers.EmailField(required=True, help_text="User email address.")
     password: str = serializers.CharField(
         required=True, write_only=True, help_text="User password."
     )
@@ -76,9 +73,7 @@ class UserLoginWebTokenSerializer(JSONWebTokenSerializer):
         return {"user": validate_user_login.user_instance, "token": jwt_token}
 
 
-class UserAuthRegisterSerializer(
-    CoreGenericSerializerMixin, serializers.Serializer
-):
+class UserAuthRegisterSerializer(CoreGenericSerializerMixin, serializers.Serializer):
     handler_class = UserAuthRegisterHandler
     queryset = get_user_model().objects.all()
 

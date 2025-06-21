@@ -3,13 +3,9 @@ from coreutils.utils.generics.serializers.mixins import CoreGenericBaseHandler
 from userauth.models import UserModel
 
 
-class UserAuthRegisterHandler(
-    CoreGenericBaseHandler
-):
+class UserAuthRegisterHandler(CoreGenericBaseHandler):
     def validate(self):
-        if self.queryset.filter(
-            email=self.data['email']
-        ).exists():
+        if self.queryset.filter(email=self.data["email"]).exists():
             return self.set_error_message(
                 error_message={
                     "title": "Failed to update.",
@@ -23,10 +19,9 @@ class UserAuthRegisterHandler(
         try:
             with transaction.atomic():
                 instance: UserModel = self.queryset.create(
-                    email=self.data['email'],
-                    username=self.data['username']
+                    email=self.data["email"], username=self.data["username"]
                 )
-                instance.set_password(raw_password=self.data['password'])
+                instance.set_password(raw_password=self.data["password"])
                 instance.save()
         except Exception as e:
             raise Exception(f"Error while updating user details : {str(e)}")

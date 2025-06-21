@@ -1,6 +1,5 @@
 import uuid
 
-from django.apps import apps
 from django.contrib.auth.models import (
     AbstractBaseUser,
     BaseUserManager,
@@ -59,7 +58,7 @@ class UserModel(AbstractBaseUser, PermissionsMixin):
         unique=True,
         primary_key=True,
         default=uuid.uuid1,
-        db_column="USER_AUTH_ID",
+        db_column="ID",
         editable=False,
     )
 
@@ -100,14 +99,8 @@ class UserModel(AbstractBaseUser, PermissionsMixin):
     )
 
     # ? project permissions
-    is_client = models.BooleanField(
-        default=False,
-        db_column="IS_CLIENT"
-    )
-    is_instructor = models.BooleanField(
-        default=False,
-        db_column="IS_INSTRUCTOR"
-    )
+    is_client = models.BooleanField(default=False, db_column="IS_CLIENT")
+    is_instructor = models.BooleanField(default=False, db_column="IS_INSTRUCTOR")
 
     # ? Custom Fields
 

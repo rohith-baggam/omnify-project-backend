@@ -6,7 +6,6 @@ from rest_framework import status
 from core.settings import logger
 import logging
 import inspect
-import uuid
 
 
 class CoreGenericUtils:
@@ -28,8 +27,7 @@ class CoreGenericUtils:
         module: Optional[object] = inspect.getmodule(frame[0])
         class_name: str = self.__class__.__name__
         file_path: str = (
-            module.__file__ if module and hasattr(
-                module, "__file__") else "unknown"
+            module.__file__ if module and hasattr(module, "__file__") else "unknown"
         )
 
         adapter: logging.LoggerAdapter = logging.LoggerAdapter(
@@ -102,7 +100,7 @@ class CoreGenericUtils:
 
     def add_values_to_context(self):
         """
-        if any extra values are required, they can 
+        if any extra values are required, they can
         be explicitly added to context
         """
         return {}

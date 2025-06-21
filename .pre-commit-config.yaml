@@ -6,7 +6,6 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
       - id: check-docstring-first
-      # - id: pretty-format-json
 
   - repo: https://github.com/psf/black
     rev: 25.1.0
@@ -14,37 +13,18 @@ repos:
       - id: black
         language_version: python3.12
 
-  - repo: https://github.com/myint/autoflake
-    rev: v2.3.1
-    hooks:
-      - id: autoflake
-        args:
-          [
-            "--remove-all-unused-imports",
-            "--remove-unused-variables",
-            "--in-place",
-            "--recursive",
-            ".",
-          ]
   - repo: local
     hooks:
       - id: check-variable-naming
         name: Check variable naming
-        entry: python coreutils/pre_commit/precommit_check_variable_naming.py
+        entry: python coreutils/utils/pre_commit/precommit_check_variable_naming.py
         language: python
         pass_filenames: true
-  - repo: local
-    hooks:
-      - id: delete-empty-files
-        name: Delete Empty Python Files
-        entry: python coreutils/pre_commit/delete_empty_files.py
-        language: system
-        types: [python]
 
   - repo: local
     hooks:
       - id: check-duplicate-classes
         name: Delete Empty Python Files
-        entry: python coreutils/pre_commit/check_duplicate_class_names.py
+        entry: python coreutils/utils/pre_commit/check_duplicate_class_names.py
         language: system
         types: [python]

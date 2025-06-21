@@ -1,13 +1,8 @@
 from .serializers import UserAuthRegisterSerializer
 from django.contrib.auth import get_user_model
-from userauth.api.v1.utils.custom_authentication.custom_authentication import (
-    CustomAuthentication,
-)
 from coreutils.utils.generics.views.generic_views import CoreGenericPostAPIView
 from rest_framework import generics
-from userauth.api.v1.utils.constants import (
-    USER_REGISTERED_SUCCESS_MESSAGE
-)
+from userauth.api.v1.utils.constants import USER_REGISTERED_SUCCESS_MESSAGE
 
 
 class UserAuthRegisterAPIView(
