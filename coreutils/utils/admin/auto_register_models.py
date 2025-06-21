@@ -10,8 +10,7 @@ from coreutils.utils.generics.generic_models import CoreGenericModel
 from coreutils.utils.db_utils.model_fetcher import GetModels
 
 # ? Fetching auto-registration settings from Django settings
-AUTO_REGISTER_MODEL_APPS: List = getattr(
-    settings, "AUTO_REGISTER_MODEL_APPS", [])
+AUTO_REGISTER_MODEL_APPS: List = getattr(settings, "AUTO_REGISTER_MODEL_APPS", [])
 AUTO_REGISTER_MODELS: bool = getattr(settings, "AUTO_REGISTER_MODELS", False)
 CUSTOM_APPS: List = getattr(settings, "CUSTOM_APPS", [])
 

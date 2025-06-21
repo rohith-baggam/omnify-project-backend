@@ -17,8 +17,7 @@ class CustomAuthentication(JSONWebTokenAuthentication):
     Custom Authentication Class for User's
     """
 
-    logger = logging.LoggerAdapter(
-        logger, {"app_name": "CustomAuthentication"})
+    logger = logging.LoggerAdapter(logger, {"app_name": "CustomAuthentication"})
 
     www_authenticate_realm: str = "api"
 

@@ -58,8 +58,7 @@ class CoreGenericProcessDataAPIView(CoreGenericUtils):
         serializer_errors: bool = serializer_class.is_valid()
         serializer_validation_error: Dict = {}
         if not serializer_errors:
-            extracted_errors: Dict = self.extract_error(
-                serializer_class.errors)
+            extracted_errors: Dict = self.extract_error(serializer_class.errors)
             serializer_validation_error: Dict = {
                 "error_message": {
                     "title": "Failed to execute.",

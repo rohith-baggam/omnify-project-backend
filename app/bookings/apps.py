@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class UserauthConfig(AppConfig):
+class BookingsConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "userauth"
+    name = "bookings"

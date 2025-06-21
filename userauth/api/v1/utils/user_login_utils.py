@@ -87,8 +87,7 @@ class ValidateUserLogin:
         Returns:
             str: An error message if validation fails, otherwise None.
         """
-        user_queryset: QuerySet[AbstractBaseUser] = get_user_model(
-        ).objects.all()
+        user_queryset: QuerySet[AbstractBaseUser] = get_user_model().objects.all()
 
         # ? Check if a user with the provided email exists
         if not user_queryset.filter(email=self.email).exists():

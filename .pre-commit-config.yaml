@@ -30,21 +30,14 @@ repos:
     hooks:
       - id: check-variable-naming
         name: Check variable naming
-        entry: python coreutils/pre_commit/precommit_check_variable_naming.py
+        entry: python coreutils/utils/pre_commit/precommit_check_variable_naming.py
         language: python
         pass_filenames: true
-  - repo: local
-    hooks:
-      - id: delete-empty-files
-        name: Delete Empty Python Files
-        entry: python coreutils/pre_commit/delete_empty_files.py
-        language: system
-        types: [python]
 
   - repo: local
     hooks:
       - id: check-duplicate-classes
         name: Delete Empty Python Files
-        entry: python coreutils/pre_commit/check_duplicate_class_names.py
+        entry: python coreutils/utils/pre_commit/check_duplicate_class_names.py
         language: system
         types: [python]

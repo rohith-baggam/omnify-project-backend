@@ -93,8 +93,7 @@ class UserLoginCreateUtils:
             token=token,
         )
 
-        logger.info(
-            f"Login Analytics Instance Created: {login_analytics_instance}")
+        logger.info(f"Login Analytics Instance Created: {login_analytics_instance}")
         return login_analytics_instance
 
     def create_and_block_existing_token(self, token: str) -> BlackListTokenModel:
@@ -130,8 +129,7 @@ class UserLoginCreateUtils:
                 user=self.user_instance, is_login=True, token=token
             )
 
-            logger.info(
-                f"New Blacklist Token Created: {latest_blacklist_token}")
+            logger.info(f"New Blacklist Token Created: {latest_blacklist_token}")
 
             # ? Record user login analytics
             self.add_user_login_analytics_instance(token=token)
@@ -186,8 +184,7 @@ def jwt_response_payload_handler(
     Returns:
         dict: The JWT response payload.
     """
-    login_utils = UserLoginCreateUtils(
-        request=request, user_instance=user, token=token)
+    login_utils = UserLoginCreateUtils(request=request, user_instance=user, token=token)
 
     # ? Blacklist old tokens and create a new one
     login_utils.create_and_block_existing_token(token=token)

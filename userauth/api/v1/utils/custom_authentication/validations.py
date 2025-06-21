@@ -55,8 +55,7 @@ class CustomAuthenticationValidator:
 
     def __init__(self, request: Request):
         self.request = request
-        self.authentication_details = ExtractAuthenticationDetails(
-            request=request)
+        self.authentication_details = ExtractAuthenticationDetails(request=request)
 
     def auth_headers_length_validator(self) -> Union[str, None]:
         if not self.authentication_details.jwt_token:
@@ -99,8 +98,7 @@ class CustomAuthenticationValidator:
         jwt_token_util: JwtTokenUtils = JwtTokenUtils(
             jwt_token=self.authentication_details.jwt_token
         )
-        print("jwt_token_util.is_token_expired()",
-              jwt_token_util.is_token_expired())
+        print("jwt_token_util.is_token_expired()", jwt_token_util.is_token_expired())
         if jwt_token_util.is_token_expired():
             return "jwt token expired"
 
