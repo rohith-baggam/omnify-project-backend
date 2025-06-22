@@ -41,7 +41,9 @@ class GetModels:
 
         for app in self.custom_apps:
             # ? Fetch all models from the app configuration and append them to the list
+
             app_models: List[Model] = apps.get_app_config(app).get_models()
+
             custom_models.extend(app_models)
 
         return custom_models

@@ -45,6 +45,7 @@ logger.setLevel(logging.DEBUG)
 CUSTOM_APPS = [
     "userauth",
     "coreutils",
+    "store",
     "store.bookings",
     "store.classes",
     "store.slots",
@@ -65,6 +66,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # 'coreutils.apps.CoreutilsConfig',
     *CUSTOM_APPS,
     *THIRD_PARTY_APPS,
 ]
@@ -154,7 +156,13 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTO_REGISTER_MODELS = True
-AUTO_REGISTER_MODEL_APPS = ["userauth"]
+AUTO_REGISTER_MODEL_APPS = [
+    "userauth",
+    "coreutils",
+    "store.bookings",
+    "store.slots",
+    "store.classes",
+]
 
 
 # ? Rest Framework settings
