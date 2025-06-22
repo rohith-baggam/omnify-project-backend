@@ -37,9 +37,11 @@ class ClassListModelSerializer(serializers.ModelSerializer):
 
     def get_available_slots(self, obj: ClassAssignedInstructorModel) -> List[Dict]:
         try:
-            return get_assigned_slots_for_classes(assigned_class_instance=obj)
+            return get_assigned_slots_for_classes(
+                assigned_class_instance=obj, params=self.context["request"].GET.dict()
+            )
         except Exception as e:
-            print(e)
+            print("get_available_slots ", e)
             return []
 
 

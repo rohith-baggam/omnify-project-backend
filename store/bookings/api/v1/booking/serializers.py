@@ -12,6 +12,7 @@ class SlotBookingSerializer(CoreGenericSerializerMixin, serializers.Serializer):
     class_id = serializers.UUIDField()
     client_name = serializers.CharField()
     client_email = serializers.EmailField()
+    date_of_booking = serializers.DateField()
     handler_class = BookingHandler
 
 
@@ -29,6 +30,7 @@ class BookingListModelSerializer(serializers.ModelSerializer):
             "instructor_details",
             "class_details",
             "slot_details",
+            "date_of_booking",
         ]
 
     def get_client_details(self, obj: BookingsModel):

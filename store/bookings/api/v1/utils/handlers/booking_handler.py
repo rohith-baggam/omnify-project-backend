@@ -7,6 +7,7 @@ from django.contrib.auth import get_user_model
 from store.slots.models import AssignedSlotsTimingsToClassesModel
 from typing import Dict
 from django.utils.timezone import now as django_now
+from datetime import datetime
 
 
 class BookingHandler(CoreGenericBaseHandler):
@@ -69,7 +70,7 @@ class BookingHandler(CoreGenericBaseHandler):
         if (
             booking_queryset.filter(
                 slot=self.assigned_slots_timings_to_class_instance,
-                date_of_booking=django_now().date(),
+                date_of_booking=self.data["date_of_booking"],
             ).count()
             == self.assigned_slots_timings_to_class_instance.slot_id.max_no_of_attendies
         ):
@@ -80,6 +81,45 @@ class BookingHandler(CoreGenericBaseHandler):
 
         return error_message
 
+    def validate_date_of_booking(self):
+        """
+        Validates:
+        - date_of_booking is not in the past
+        - slot start time is not in the past (only if booking for today)
+        """
+
+        # Convert to date object if string
+        if isinstance(self.data["date_of_booking"], str):
+            booking_date: datetime.strptime = datetime.strptime(
+                self.data["date_of_booking"], "%Y-%m-%d"
+            ).date()
+        else:
+            booking_date: datetime.strptime = self.data["date_of_booking"]
+
+        today = django_now().date()
+        now_time = django_now().time()
+
+        #  Date is before today
+        if booking_date < today:
+            return {
+                "title": "Date issue",
+                "description": "date_of_booking should not be less than today",
+            }
+
+        # Only check slot time if booking for today
+        if booking_date == today:
+            slot_start_time = (
+                self.assigned_slots_timings_to_class_instance.slot_id.start_time
+            )
+
+            if slot_start_time <= now_time:
+                return {
+                    "title": "Slot issue",
+                    "description": "Slot should not be in the past for today's booking",
+                }
+
+        return {}  # No issues
+
     def validate(self):
         """
         Executes all necessary validations before creating a booking.
@@ -89,7 +129,7 @@ class BookingHandler(CoreGenericBaseHandler):
             AssignedSlotsTimingsToClassesModel.objects.all()
         )
 
-        class_id_error_message = self.validate_class_id(
+        class_id_error_message: Dict = self.validate_class_id(
             assigned_slots_timings_to_class_queryset=assigned_slots_timings_to_class_queryset
         )
 
@@ -97,6 +137,12 @@ class BookingHandler(CoreGenericBaseHandler):
             return self.set_error_message(
                 error_message=class_id_error_message,
                 key="class_id",
+            )
+        date_of_booking_error_message: Dict = self.validate_date_of_booking()
+        if date_of_booking_error_message:
+            return self.set_error_message(
+                error_message=date_of_booking_error_message,
+                key="date_of_booking",
             )
 
     def get_user_instance(self) -> UserModel:
@@ -131,5 +177,5 @@ class BookingHandler(CoreGenericBaseHandler):
             self.queryset.create(
                 client=user_instance,
                 slot=self.assigned_slots_timings_to_class_instance,
-                date_of_booking=django_now().date(),
+                date_of_booking=self.data["date_of_booking"],
             )
