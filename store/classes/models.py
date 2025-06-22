@@ -23,6 +23,9 @@ class ClassesModel(CoreGenericModel):
     class Meta:
         db_table = "CLASSES_TABLE"
 
+    def __str__(self):
+        return self.title
+
 
 class ClassAssignedInstructorModel(CoreGenericModel):
     "Defines available slot details like timing and attendies."
@@ -56,3 +59,6 @@ class ClassAssignedInstructorModel(CoreGenericModel):
     class Meta:
         db_table = "CLASSES_ASSIGNED_INSTRUCTOR_TABLE"
         unique_together = ("instructor", "classes")
+
+    def __str__(self):
+        return f"{self.classes.title} -> {self.instructor.username}"

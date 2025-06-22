@@ -39,3 +39,4 @@ class WeekDayOffModel(CoreGenericModel):
 
     class Meta:
         db_table = "WEEK_OF_DAYS"
+        ordering = ("core_generic_created_at",)

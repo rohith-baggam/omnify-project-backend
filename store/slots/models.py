@@ -21,6 +21,9 @@ class SlotTimigsModel(CoreGenericModel):
     class Meta:
         db_table = "SLOT_TIMINGS_TABLE"
 
+    def __str__(self):
+        return f"{self.start_time} - {self.end_time}"
+
 
 class AssignedSlotsTimingsToClassesModel(CoreGenericModel):
     "Assigns specific time slots to instructor-class pairs."
@@ -48,3 +51,6 @@ class AssignedSlotsTimingsToClassesModel(CoreGenericModel):
     class Meta:
         db_table = "ASSIGNED_SLOTS_TIMINGS_TO_CLASSES_TABLE"
         unique_together = ("class_id", "slot_id")
+
+    def __str__(self):
+        return f"{self.class_id.classes.title} - {self.slot_id.start_time}"
