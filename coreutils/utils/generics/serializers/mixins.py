@@ -138,3 +138,9 @@ class CoreGenericBaseHandler:
         Returns the dict of kwargs from the request
         """
         return self.request.parser_context["kwargs"]
+
+    def validate(self):
+        pass
+
+    def create(self):
+        pass
