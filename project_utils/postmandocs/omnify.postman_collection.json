@@ -1,0 +1,878 @@
+{
+	"info": {
+		"_postman_id": "6728c79b-ce25-4b90-a742-43f3e11e4e84",
+		"name": "omnify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28644884",
+		"_collection_link": "https://www.postman.com/solar-flare-791304/workspace/omnify/collection/28644884-6728c79b-ce25-4b90-a742-43f3e11e4e84?action=share&source=collection_link&creator=28644884"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"Abcd.1234\",\n    \"email\": \"user1@mail.com\",\n    \"re_login\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}userauth/{{api/v1}}/user-login-api/",
+							"host": [
+								"{{baseurl}}userauth"
+							],
+							"path": [
+								"{{api/v1}}",
+								"user-login-api",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"password\": \"Abcd.1234\",\n    \"email\": \"user1@mail.com\",\n    \"re_login\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}userauth/{{api/v1}}/user-login-api/",
+									"host": [
+										"{{baseurl}}userauth"
+									],
+									"path": [
+										"{{api/v1}}",
+										"user-login-api",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 09:57:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "477"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"{{vault:json-web-token}}\",\n    \"user_id\": \"911b0e18-4e83-11f0-99c6-46124d953699\",\n    \"username\": \"user1\",\n    \"email\": \"user1@mail.com\",\n    \"is_active\": true,\n    \"ip_address\": \"127.0.0.1\",\n    \"is_admin\": false,\n    \"is_first_login\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "User Register API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"hiit\",\n    \"email\":\"instructor@hiit.com\",\n    \"password\" : \"Abcd.1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}userauth/{{api/v1}}/user-register-api/",
+							"host": [
+								"{{baseurl}}userauth"
+							],
+							"path": [
+								"{{api/v1}}",
+								"user-register-api",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Register Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\" : \"user2\",\n    \"email\":\"user2@mail.com\",\n    \"password\" : \"Abcd.1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}userauth/{{api/v1}}/user-register-api/",
+									"host": [
+										"{{baseurl}}userauth"
+									],
+									"path": [
+										"{{api/v1}}",
+										"user-register-api",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jun 2025 11:52:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "163"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": {\n        \"title\": \"User Registered\",\n        \"description\": \"User registered successfully\"\n    },\n    \"results\": {\n        \"username\": \"user2\",\n        \"password\": \"Abcd.1234\",\n        \"email\": \"user2@mail.com\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Classes",
+			"item": [
+				{
+					"name": "classes List API",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"user2\",\n    \"email\":\"user2@mail.com\",\n    \"password\" : \"Abcd.1234\"\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}store/classes/{{api/v1}}/classes/?date_of_booking=2025-06-23",
+							"host": [
+								"{{baseurl}}store"
+							],
+							"path": [
+								"classes",
+								"{{api/v1}}",
+								"classes",
+								""
+							],
+							"query": [
+								{
+									"key": "date_of_booking",
+									"value": "2025-06-23"
+								}
+							]
+						},
+						"description": "available class List API"
+					},
+					"response": [
+						{
+							"name": "Response Before Booking",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\" : \"user2\",\n    \"email\":\"user2@mail.com\",\n    \"password\" : \"Abcd.1234\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}store/classes/{{api/v1}}/classes/?date_of_booking=2025-06-23",
+									"host": [
+										"{{baseurl}}store"
+									],
+									"path": [
+										"classes",
+										"{{api/v1}}",
+										"classes",
+										""
+									],
+									"query": [
+										{
+											"key": "date_of_booking",
+											"value": "2025-06-23"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 19:27:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3094"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": \"d1858d90-4f6c-11f0-bd7d-46124d953699\",\n            \"class_name\": \"HIIT\",\n            \"instructor\": \"hiit instructor\",\n            \"week_days_off\": [\n                \"WEDNSDAY\",\n                \"THURSDAY\"\n            ],\n            \"available_slots\": [\n                {\n                    \"id\": \"13bb2872-4f6e-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"09:00:00\",\n                    \"slot_id__end_time\": \"10:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"18248a2a-4f6e-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"10:00:00\",\n                    \"slot_id__end_time\": \"11:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"09eac7ee-4f6e-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"06:00:00\",\n                    \"slot_id__end_time\": \"07:00:00\",\n                    \"slot_id__max_no_of_attendies\": 2\n                },\n                {\n                    \"id\": \"0d69f8cc-4f6e-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"07:00:00\",\n                    \"slot_id__end_time\": \"08:00:00\",\n                    \"slot_id__max_no_of_attendies\": 2\n                },\n                {\n                    \"id\": \"109e46c4-4f6e-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"08:00:00\",\n                    \"slot_id__end_time\": \"09:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                }\n            ]\n        },\n        {\n            \"id\": \"c3e19a1c-4f6c-11f0-bd7d-46124d953699\",\n            \"class_name\": \"Zumba\",\n            \"instructor\": \"zumba instructor\",\n            \"week_days_off\": [\n                \"SATURDAY\",\n                \"SUNDAY\"\n            ],\n            \"available_slots\": [\n                {\n                    \"id\": \"f5b8299c-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"09:00:00\",\n                    \"slot_id__end_time\": \"10:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"fa3ca560-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"18:00:00\",\n                    \"slot_id__end_time\": \"19:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"fcfbf1fc-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"19:00:00\",\n                    \"slot_id__end_time\": \"20:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"eafb8594-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"06:00:00\",\n                    \"slot_id__end_time\": \"07:00:00\",\n                    \"slot_id__max_no_of_attendies\": 2\n                },\n                {\n                    \"id\": \"eee87004-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"07:00:00\",\n                    \"slot_id__end_time\": \"08:00:00\",\n                    \"slot_id__max_no_of_attendies\": 2\n                },\n                {\n                    \"id\": \"f155541a-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"08:00:00\",\n                    \"slot_id__end_time\": \"09:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                }\n            ]\n        },\n        {\n            \"id\": \"7b09d17e-4f6c-11f0-b7c0-46124d953699\",\n            \"class_name\": \"Yoga\",\n            \"instructor\": \"yoga instructor\",\n            \"week_days_off\": [\n                \"SATURDAY\",\n                \"SUNDAY\"\n            ],\n            \"available_slots\": [\n                {\n                    \"id\": \"bd1862d2-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"17:00:00\",\n                    \"slot_id__end_time\": \"18:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"c00eb34c-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"18:00:00\",\n                    \"slot_id__end_time\": \"19:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"c2ba48d6-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"19:00:00\",\n                    \"slot_id__end_time\": \"20:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"b927249c-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"10:00:00\",\n                    \"slot_id__end_time\": \"11:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"acc407ec-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"06:00:00\",\n                    \"slot_id__end_time\": \"07:00:00\",\n                    \"slot_id__max_no_of_attendies\": 2\n                },\n                {\n                    \"id\": \"b1ab675a-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"07:00:00\",\n                    \"slot_id__end_time\": \"08:00:00\",\n                    \"slot_id__max_no_of_attendies\": 2\n                },\n                {\n                    \"id\": \"b594e706-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"08:00:00\",\n                    \"slot_id__end_time\": \"09:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Response After booking",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\" : \"user2\",\n    \"email\":\"user2@mail.com\",\n    \"password\" : \"Abcd.1234\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}store/classes/{{api/v1}}/classes/?date_of_booking=2025-06-23",
+									"host": [
+										"{{baseurl}}store"
+									],
+									"path": [
+										"classes",
+										"{{api/v1}}",
+										"classes",
+										""
+									],
+									"query": [
+										{
+											"key": "date_of_booking",
+											"value": "2025-06-23"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 19:27:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2951"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": \"d1858d90-4f6c-11f0-bd7d-46124d953699\",\n            \"class_name\": \"HIIT\",\n            \"instructor\": \"hiit instructor\",\n            \"week_days_off\": [\n                \"WEDNSDAY\",\n                \"THURSDAY\"\n            ],\n            \"available_slots\": [\n                {\n                    \"id\": \"18248a2a-4f6e-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"10:00:00\",\n                    \"slot_id__end_time\": \"11:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"09eac7ee-4f6e-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"06:00:00\",\n                    \"slot_id__end_time\": \"07:00:00\",\n                    \"slot_id__max_no_of_attendies\": 2\n                },\n                {\n                    \"id\": \"0d69f8cc-4f6e-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"07:00:00\",\n                    \"slot_id__end_time\": \"08:00:00\",\n                    \"slot_id__max_no_of_attendies\": 2\n                },\n                {\n                    \"id\": \"109e46c4-4f6e-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"08:00:00\",\n                    \"slot_id__end_time\": \"09:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                }\n            ]\n        },\n        {\n            \"id\": \"c3e19a1c-4f6c-11f0-bd7d-46124d953699\",\n            \"class_name\": \"Zumba\",\n            \"instructor\": \"zumba instructor\",\n            \"week_days_off\": [\n                \"SATURDAY\",\n                \"SUNDAY\"\n            ],\n            \"available_slots\": [\n                {\n                    \"id\": \"f5b8299c-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"09:00:00\",\n                    \"slot_id__end_time\": \"10:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"fa3ca560-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"18:00:00\",\n                    \"slot_id__end_time\": \"19:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"fcfbf1fc-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"19:00:00\",\n                    \"slot_id__end_time\": \"20:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"eafb8594-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"06:00:00\",\n                    \"slot_id__end_time\": \"07:00:00\",\n                    \"slot_id__max_no_of_attendies\": 2\n                },\n                {\n                    \"id\": \"eee87004-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"07:00:00\",\n                    \"slot_id__end_time\": \"08:00:00\",\n                    \"slot_id__max_no_of_attendies\": 2\n                },\n                {\n                    \"id\": \"f155541a-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"08:00:00\",\n                    \"slot_id__end_time\": \"09:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                }\n            ]\n        },\n        {\n            \"id\": \"7b09d17e-4f6c-11f0-b7c0-46124d953699\",\n            \"class_name\": \"Yoga\",\n            \"instructor\": \"yoga instructor\",\n            \"week_days_off\": [\n                \"SATURDAY\",\n                \"SUNDAY\"\n            ],\n            \"available_slots\": [\n                {\n                    \"id\": \"bd1862d2-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"17:00:00\",\n                    \"slot_id__end_time\": \"18:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"c00eb34c-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"18:00:00\",\n                    \"slot_id__end_time\": \"19:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"c2ba48d6-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"19:00:00\",\n                    \"slot_id__end_time\": \"20:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"b927249c-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"10:00:00\",\n                    \"slot_id__end_time\": \"11:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                },\n                {\n                    \"id\": \"acc407ec-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"06:00:00\",\n                    \"slot_id__end_time\": \"07:00:00\",\n                    \"slot_id__max_no_of_attendies\": 2\n                },\n                {\n                    \"id\": \"b1ab675a-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"07:00:00\",\n                    \"slot_id__end_time\": \"08:00:00\",\n                    \"slot_id__max_no_of_attendies\": 2\n                },\n                {\n                    \"id\": \"b594e706-4f6d-11f0-b471-46124d953699\",\n                    \"slot_id__start_time\": \"08:00:00\",\n                    \"slot_id__end_time\": \"09:00:00\",\n                    \"slot_id__max_no_of_attendies\": 1\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Booking API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"class_id\" : \"13bb2872-4f6e-11f0-b471-46124d953699\",\n    \"client_name\" : \"user2\",\n    \"client_email\" : \"user2@mail.com\",\n    \"date_of_booking\" : \"2025-06-23\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}store/bookings/{{api/v1}}/book/",
+							"host": [
+								"{{baseurl}}store"
+							],
+							"path": [
+								"bookings",
+								"{{api/v1}}",
+								"book",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Slot's filled error message",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"class_id\" : \"09eac7ee-4f6e-11f0-b471-46124d953699\",\n    \"client_name\" : \"user4\",\n    \"client_email\" : \"user4@mail.com\",\n    \"date_of_booking\" : \"2025-06-22\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}store/bookings/{{api/v1}}/book/",
+									"host": [
+										"{{baseurl}}store"
+									],
+									"path": [
+										"bookings",
+										"{{api/v1}}",
+										"book",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 17:27:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "154"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": {\n        \"title\": \"Slot's are filled\",\n        \"description\": \"max people are filled for this slot\"\n    },\n    \"results\": {\n        \"class_id\": \"max people are filled for this slot\"\n    }\n}"
+						},
+						{
+							"name": "If same person book again error message",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"class_id\" : \"09eac7ee-4f6e-11f0-b471-46124d953699\",\n    \"client_name\" : \"user3\",\n    \"client_email\" : \"user3@mail.com\",\n    \"date_of_booking\" : \"2025-06-22\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}store/bookings/{{api/v1}}/book/",
+									"host": [
+										"{{baseurl}}store"
+									],
+									"path": [
+										"bookings",
+										"{{api/v1}}",
+										"book",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 17:29:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "155"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": {\n        \"title\": \"Already booked\",\n        \"description\": \"You have already booked for this slot\"\n    },\n    \"results\": {\n        \"class_id\": \"You have already booked for this slot\"\n    }\n}"
+						},
+						{
+							"name": "Date Validation Error Message",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"class_id\" : \"13bb2872-4f6e-11f0-b471-46124d953699\",\n    \"client_name\" : \"user2\",\n    \"client_email\" : \"user2@mail.com\",\n    \"date_of_booking\" : \"2025-06-21\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}store/bookings/{{api/v1}}/book/",
+									"host": [
+										"{{baseurl}}store"
+									],
+									"path": [
+										"bookings",
+										"{{api/v1}}",
+										"book",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 19:26:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "174"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": {\n        \"title\": \"Date issue\",\n        \"description\": \"date_of_booking should not be less than today\"\n    },\n    \"results\": {\n        \"date_of_booking\": \"date_of_booking should not be less than today\"\n    }\n}"
+						},
+						{
+							"name": "Duration Validation Error Message",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"class_id\" : \"13bb2872-4f6e-11f0-b471-46124d953699\",\n    \"client_name\" : \"user2\",\n    \"client_email\" : \"user2@mail.com\",\n    \"date_of_booking\" : \"2025-06-22\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}store/bookings/{{api/v1}}/book/",
+									"host": [
+										"{{baseurl}}store"
+									],
+									"path": [
+										"bookings",
+										"{{api/v1}}",
+										"book",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 19:26:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "184"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": {\n        \"title\": \"Slot issue\",\n        \"description\": \"Slot should not be in the past for today's booking\"\n    },\n    \"results\": {\n        \"date_of_booking\": \"Slot should not be in the past for today's booking\"\n    }\n}"
+						},
+						{
+							"name": "Success Message",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"class_id\" : \"13bb2872-4f6e-11f0-b471-46124d953699\",\n    \"client_name\" : \"user2\",\n    \"client_email\" : \"user2@mail.com\",\n    \"date_of_booking\" : \"2025-06-23\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}store/bookings/{{api/v1}}/book/",
+									"host": [
+										"{{baseurl}}store"
+									],
+									"path": [
+										"bookings",
+										"{{api/v1}}",
+										"book",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 19:27:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "237"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": {\n        \"title\": \"Slot Booked\",\n        \"description\": \"Your slot has been booked successfully\"\n    },\n    \"results\": {\n        \"class_id\": \"13bb2872-4f6e-11f0-b471-46124d953699\",\n        \"client_name\": \"user2\",\n        \"client_email\": \"user2@mail.com\",\n        \"date_of_booking\": \"2025-06-23\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Booking List API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}store/bookings/{{api/v1}}/bookings/?client_email=user2@mail.com",
+							"host": [
+								"{{baseurl}}store"
+							],
+							"path": [
+								"bookings",
+								"{{api/v1}}",
+								"bookings",
+								""
+							],
+							"query": [
+								{
+									"key": "client_email",
+									"value": "user2@mail.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Booking List API with client email",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}store/bookings/{{api/v1}}/bookings/?client_email=user2@mail.com",
+									"host": [
+										"{{baseurl}}store"
+									],
+									"path": [
+										"bookings",
+										"{{api/v1}}",
+										"bookings",
+										""
+									],
+									"query": [
+										{
+											"key": "client_email",
+											"value": "user2@mail.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 22 Jun 2025 18:25:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "506"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": \"2d6d50ce-4f96-11f0-b216-46124d953699\",\n            \"client_details\": {\n                \"user_id\": \"user2\",\n                \"username\": \"user2\",\n                \"email\": \"user2@mail.com\"\n            },\n            \"instructor_details\": {\n                \"user_id\": \"hiit instructor\",\n                \"username\": \"hiit instructor\",\n                \"email\": \"instructor@hiit.com\"\n            },\n            \"class_details\": {\n                \"id\": \"cdfe81a0-4f6b-11f0-b7c0-46124d953699\",\n                \"class_name\": \"HIIT\"\n            },\n            \"slot_details\": {\n                \"slot_id\": \"d27f33b8-4f67-11f0-b842-46124d953699\",\n                \"start_time\": \"06:00:00\",\n                \"end_time\": \"07:00:00\",\n                \"max_no_of_attendies\": 2\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,103 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+Table USER_TABLE {
+  note :"Stores details of all users including clients"
+  ID uuid [not null, primary key, note: "Unique identifier for each user (Primary Key)"]
+  USERNAME varchar [not null, note: "User's username, maximum length of 256 characters"]
+  EMAIL emailField [not null, unique, note: "User's email address, must be unique; maximum length of 256 characters"]
+  PASSWORD varchar [not null, note: "User's password encrypted using Django's hashing system"]
+  // Project level permissions
+  IS_CLIENT boolean [not null, default: false, note: "Flag indicating if the user is a client"]
+  IS_INSTRUCTOR boolean [not null, default: false, note: "Flag indicating if the user is an instructor"]
+  // Permissions
+  // Default django abstract Permissions
+  IS_STAFF boolean [not null, default: false, note: "Flag indicating if the user is a staff"]
+  IS_ACTIVE boolean [not null, default: false, note: "Flag indicating if the user is active"]
+  IS_SUPERUSER boolean [not null, default: false, note: "Flag indicating if the user is a superuser to login into django admin pannel"]
+  // custom permissions
+  IS_VERIFIED boolean [not null, default: false, note: "Flag indicating if the user is a client"]
+  IS_APPROVED boolean [not null, default: false, note: "Flag indicating if the user is a client"]
+
+  LAST_LOGIN datetime [note: "Timestamp when the record last login;"]
+
+  CREATED_DATE datetime [note: "Timestamp when the record was created; non-editable"]
+  UPDATED_DATE datetime [note: "Timestamp when the record was last updated; non-editable"]
+}
+
+Table CLASSES_TABLE {
+  note :"Stores information related to different classes."
+  ID uuid [not null, primary key, note: "Unique identifier for each class (Primary Key)"]
+  TITLE varchar [not null, unique, note: "Unique title of the class"]
+  DESCRIPTION varchar [note: "Detailed description of the class (optional)"]
+
+  CORE_GENERIC_CREATED_AT datetime [note: "Timestamp when the record was created; non-editable"]
+  CORE_GENERIC_UPDATED_AT datetime [note: "Timestamp when the record was last updated; non-editable"]
+}
+
+Table CLASSES_ASSIGNED_INSTRUCTOR_TABLE {
+  note :"Associates instructors with their respective classes."
+  ID uuid [not null, primary key, note: "Unique identifier for the assignment (Primary Key)"]
+  USER_ASSIGNED uuid [not null, ref: > USER_TABLE.ID, note: "Instructor assigned to the class"]
+  CLASS_ASSIGNED uuid [not null, ref: > CLASSES_TABLE.ID, note: "Class assigned to the instructor"]
+  WEEK_OFF_DAYS foreignkey [ref:>WEEK_OF_DAYS.ID, note : "Which days classes are off"]
+  CORE_GENERIC_CREATED_AT datetime [note: "Timestamp when the record was created; non-editable"]
+  CORE_GENERIC_UPDATED_AT datetime [note: "Timestamp when the record was last updated; non-editable"]
+
+  // Unique constraint to ensure an instructor is assigned to a class only once
+  indexes {
+    (USER_ASSIGNED, CLASS_ASSIGNED) [unique]
+  }
+}
+
+Table SLOT_TIMINGS_TABLE {
+  note :"Defines available slot details like timing and attendies."
+  ID uuid [not null, primary key, note: "Unique identifier for each time slot (Primary Key)"]
+  START_TIME timeField [note: "Start time of the class slot"]
+  END_TIME timeField [note: "End time of the class slot"]
+  MAX_NO_OF_ATTENDIES int [default: 1, note: "Maximum number of attendees allowed in this time slot"]
+  CORE_GENERIC_CREATED_AT datetime [note: "Timestamp when the record was created; non-editable"]
+  CORE_GENERIC_UPDATED_AT datetime [note: "Timestamp when the record was last updated; non-editable"]
+}
+
+Table ASSIGNED_SLOTS_TIMINGS_TO_CLASSES_TABLE {
+  note :"Assigns specific time slots to instructor-class pairs."
+  ID uuid [not null, primary key, note: "Unique identifier for the assignment (Primary Key)"]
+  CLASS uuid [ref: > CLASSES_ASSIGNED_INSTRUCTOR_TABLE.ID, note: "Reference to the assigned instructor-class"]
+  SLOTS uuid [ref: > SLOT_TIMINGS_TABLE.ID, note: "Reference to the available slot timings"]
+  CORE_GENERIC_CREATED_AT datetime [note: "Timestamp when the record was created; non-editable"]
+  CORE_GENERIC_UPDATED_AT datetime [note: "Timestamp when the record was last updated; non-editable"]
+
+  // Unique constraint to avoid duplicate slot-class assignments
+  indexes {
+    (CLASS, SLOTS) [unique]
+  }
+}
+
+Table BOOKING_TABLE {
+  note :"Records bookings made by clients for specific slots."
+  ID uuid [not null, primary key, note: "Unique identifier for each booking (Primary Key)"]
+  CLIENT_ID uuid [not null, ref: > USER_TABLE.ID, note: "Client who made the booking"]
+  SLOT_ID uuid [not null, ref: > ASSIGNED_SLOTS_TIMINGS_TO_CLASSES_TABLE.ID, note: "Slot selected by the client"]
+  DATE_OF_BOOKING date [note: "Date on which the slot is booked"]
+  CORE_GENERIC_CREATED_AT datetime [note: "Timestamp when the record was created; non-editable"]
+  CORE_GENERIC_UPDATED_AT datetime [note: "Timestamp when the record was last updated; non-editable"]
+
+  // Unique constraint to prevent double booking of the same slot by a client on the same day
+  indexes {
+    (CLIENT_ID, SLOT_ID, DATE_OF_BOOKING) [unique]
+  }
+}
+
+Table WEEK_OF_DAYS {
+  note : "Defines weekly holidays for the scheduling system."
+  ID uuid [not null, primary key, note: "Unique identifier for the holiday schedule (Primary Key)"]
+  IS_MONDAY_HOLIDAY boolean [not null, default: false, note: "Indicates if Monday is a holiday"]
+  IS_TUESDAY_HOLIDAY boolean [not null, default: false, note: "Indicates if Tuesday is a holiday"]
+  IS_WEDNSDAY_HOLIDAY boolean [not null, default: false, note: "Indicates if Wednesday is a holiday"]
+  IS_THURSDAY_HOLIDAY boolean [not null, default: false, note: "Indicates if Thursday is a holiday"]
+  IS_FRIDAY_HOLIDAY boolean [not null, default: false, note: "Indicates if Friday is a holiday"]
+  IS_SATURDAY_HOLIDAY boolean [not null, default: false, note: "Indicates if Saturday is a holiday"]
+  IS_SUNDAY_HOLIDAY boolean [not null, default: false, note: "Indicates if Sunday is a holiday"]
+  CORE_GENERIC_CREATED_AT datetime [note: "Timestamp when the record was created; non-editable"]
+  CORE_GENERIC_UPDATED_AT datetime [note: "Timestamp when the record was last updated; non-editable"]
+}
