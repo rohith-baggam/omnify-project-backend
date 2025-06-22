@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  aptagrim_postgres_database:
+    image: postgres
+    restart: always
+
+    environment:
+      - POSTGRES_DB=TEST_POSTGRES
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=Abcd.1234
+    ports:
+      - 9051:5432
+# DB_NAME = "TEST_POSTGRES"
+# DB_USER = "test"
+# DB_PASSWORD = "Abcd.1234"
+# DB_HOST = "localhost"
+# DB_PORT = "9051"
+# ENGINE = 'django.db.backends.postgresql'

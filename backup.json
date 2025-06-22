@@ -1,0 +1,708 @@
+[
+  {
+    "model": "userauth.usermodel",
+    "pk": "0348841e-4f6c-11f0-b7c0-46124d953699",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$L6J4Xho2MjOpX8ycvhP7zP$TOtimFKmAX2p0yvBQS82hTuG3OWUBb8LZ/mU3tnwY5A=",
+      "username": "yoga instructor",
+      "email": "instructor@yoga.com",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "is_verified": true,
+      "is_approved": true,
+      "is_client": false,
+      "is_instructor": true,
+      "custom_password": "",
+      "last_login": null,
+      "created_date": "2025-06-22T13:22:57.863Z",
+      "updated_date": "2025-06-22T14:15:56.221Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "userauth.usermodel",
+    "pk": "0b048fcc-4f6c-11f0-b7c0-46124d953699",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$Og2LOqsAuI9pJB7aoSDmda$mnHxzbZKlQTFOkmYbyqaYs8NlI3t5sociJnRFKO//BI=",
+      "username": "zumba instructor",
+      "email": "instructor@zumba.com",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "is_verified": true,
+      "is_approved": true,
+      "is_client": false,
+      "is_instructor": true,
+      "custom_password": "",
+      "last_login": null,
+      "created_date": "2025-06-22T13:23:10.840Z",
+      "updated_date": "2025-06-22T14:16:11.762Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "userauth.usermodel",
+    "pk": "12afe00a-4f6c-11f0-b7c0-46124d953699",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$OgHCeF8igPbWTOiRx9uWwW$3QJPd6UACgAb70HEGsB789octvEG6gSob8wcVben15w=",
+      "username": "hiit instructor",
+      "email": "instructor@hiit.com",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "is_verified": true,
+      "is_approved": true,
+      "is_client": false,
+      "is_instructor": true,
+      "custom_password": "",
+      "last_login": null,
+      "created_date": "2025-06-22T13:23:23.707Z",
+      "updated_date": "2025-06-22T14:16:25.322Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "userauth.usermodel",
+    "pk": "1d9e69a6-4f8e-11f0-8eeb-46124d953699",
+    "fields": {
+      "password": "",
+      "username": "user3",
+      "email": "user3@mail.com",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "is_verified": true,
+      "is_approved": true,
+      "is_client": true,
+      "is_instructor": false,
+      "custom_password": null,
+      "last_login": null,
+      "created_date": "2025-06-22T17:27:04.935Z",
+      "updated_date": "2025-06-22T17:27:04.935Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "userauth.usermodel",
+    "pk": "38f19082-4e96-11f0-bff9-46124d953699",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$pnmGZruY7Xm6S9ZxD0qyjl$sYeQ549OTYTb6SfQYE5LM4iTAx4k7Ozzr93jXKW9hlo=",
+      "username": "user2",
+      "email": "user2@mail.com",
+      "is_staff": false,
+      "is_active": false,
+      "is_superuser": false,
+      "is_verified": false,
+      "is_approved": false,
+      "is_client": false,
+      "is_instructor": false,
+      "custom_password": null,
+      "last_login": null,
+      "created_date": "2025-06-21T11:52:35.590Z",
+      "updated_date": "2025-06-21T11:52:35.804Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "userauth.usermodel",
+    "pk": "5d6d6e7a-4e7a-11f0-88a5-46124d953699",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$jeJYahZIqSSovT6uw5tvgi$4HCIUDwUC0SffyeCiIYSLjW8dtHeJRaPXhkJvEZakIs=",
+      "username": "admin",
+      "email": "admin@admin.com",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": true,
+      "is_verified": true,
+      "is_approved": true,
+      "is_client": false,
+      "is_instructor": false,
+      "custom_password": "",
+      "last_login": "2025-06-21T08:33:27Z",
+      "created_date": "2025-06-21T08:33:11.118Z",
+      "updated_date": "2025-06-21T09:39:10.853Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "userauth.usermodel",
+    "pk": "911b0e18-4e83-11f0-99c6-46124d953699",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$jeJYahZIqSSovT6uw5tvgi$4HCIUDwUC0SffyeCiIYSLjW8dtHeJRaPXhkJvEZakIs=",
+      "username": "user1",
+      "email": "user1@mail.com",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "is_verified": true,
+      "is_approved": true,
+      "is_client": true,
+      "is_instructor": false,
+      "custom_password": "",
+      "last_login": "2025-06-21T10:06:24.750Z",
+      "created_date": "2025-06-21T09:39:03.110Z",
+      "updated_date": "2025-06-21T10:06:24.751Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "userauth.blacklisttokenmodel",
+    "pk": "1b12c8ca-4e86-11f0-b5d0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-21T09:57:13.528Z",
+      "core_generic_updated_at": "2025-06-21T09:57:13.528Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxQG1haWwuY29tIiwiaWF0IjoxNzUwNDk5ODMzLCJleHAiOjE3NTMwOTE4MzMsImp0aSI6ImIxOTExY2RiLWU0ZjMtNGY3YS04NjUwLTRlMDdhZGJjYTIzOCIsInVzZXJfaWQiOiI5MTFiMGUxOC00ZTgzLTExZjAtOTljNi00NjEyNGQ5NTM2OTkifQ.39g3h59vrVocy3t9bGFE3v4_Tn4-KmkKB_iOEHk42n8",
+      "user": "911b0e18-4e83-11f0-99c6-46124d953699",
+      "is_login": true,
+      "is_delete": false
+    }
+  },
+  {
+    "model": "userauth.blacklisttokenmodel",
+    "pk": "63a02fdc-4e87-11f0-8082-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-21T10:06:24.748Z",
+      "core_generic_updated_at": "2025-06-21T10:06:24.748Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxQG1haWwuY29tIiwiaWF0IjoxNzUwNTAwMzg0LCJleHAiOjE3NTMwOTIzODQsImp0aSI6ImUyODAwNzdjLTIyNWEtNGUwMi05Y2I3LTA5NTg2ZDM2ZGJlZiIsInVzZXJfaWQiOiI5MTFiMGUxOC00ZTgzLTExZjAtOTljNi00NjEyNGQ5NTM2OTkifQ.yujXrT9dLDPtWD5_kMSGa87uwCDbPZHbaUv9E9fnEzI",
+      "user": "911b0e18-4e83-11f0-99c6-46124d953699",
+      "is_login": true,
+      "is_delete": false
+    }
+  },
+  {
+    "model": "userauth.loginanalyticsmodel",
+    "pk": "1b131fb4-4e86-11f0-b5d0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-21T09:57:13.530Z",
+      "core_generic_updated_at": "2025-06-21T09:57:13.530Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "ip_address": "127.0.0.1",
+      "user": "911b0e18-4e83-11f0-99c6-46124d953699",
+      "login_count": 1,
+      "device_name": "PostmanRuntime/7.44.0",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxQG1haWwuY29tIiwiaWF0IjoxNzUwNDk5ODMzLCJleHAiOjE3NTMwOTE4MzMsImp0aSI6ImIxOTExY2RiLWU0ZjMtNGY3YS04NjUwLTRlMDdhZGJjYTIzOCIsInVzZXJfaWQiOiI5MTFiMGUxOC00ZTgzLTExZjAtOTljNi00NjEyNGQ5NTM2OTkifQ.39g3h59vrVocy3t9bGFE3v4_Tn4-KmkKB_iOEHk42n8"
+    }
+  },
+  {
+    "model": "userauth.loginanalyticsmodel",
+    "pk": "63a08658-4e87-11f0-8082-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-21T10:06:24.750Z",
+      "core_generic_updated_at": "2025-06-21T10:06:24.750Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "ip_address": "127.0.0.1",
+      "user": "911b0e18-4e83-11f0-99c6-46124d953699",
+      "login_count": 2,
+      "device_name": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxQG1haWwuY29tIiwiaWF0IjoxNzUwNTAwMzg0LCJleHAiOjE3NTMwOTIzODQsImp0aSI6ImUyODAwNzdjLTIyNWEtNGUwMi05Y2I3LTA5NTg2ZDM2ZGJlZiIsInVzZXJfaWQiOiI5MTFiMGUxOC00ZTgzLTExZjAtOTljNi00NjEyNGQ5NTM2OTkifQ.yujXrT9dLDPtWD5_kMSGa87uwCDbPZHbaUv9E9fnEzI"
+    }
+  },
+  {
+    "model": "coreutils.weekdayoffmodel",
+    "pk": "91f3217a-4f6b-11f0-b7c0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:19:47.722Z",
+      "core_generic_updated_at": "2025-06-22T13:19:47.722Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "IS_MONDAY_HOLIDAY": false,
+      "IS_TUESDAY_HOLIDAY": false,
+      "IS_WEDNSDAY_HOLIDAY": false,
+      "IS_THURSDAY_HOLIDAY": false,
+      "IS_FRIDAY_HOLIDAY": false,
+      "IS_SATURDAY_HOLIDAY": true,
+      "IS_SUNDAY_HOLIDAY": true
+    }
+  },
+  {
+    "model": "coreutils.weekdayoffmodel",
+    "pk": "a1e67ee2-4f6b-11f0-b7c0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:20:14.483Z",
+      "core_generic_updated_at": "2025-06-22T13:20:14.483Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "IS_MONDAY_HOLIDAY": false,
+      "IS_TUESDAY_HOLIDAY": false,
+      "IS_WEDNSDAY_HOLIDAY": true,
+      "IS_THURSDAY_HOLIDAY": true,
+      "IS_FRIDAY_HOLIDAY": false,
+      "IS_SATURDAY_HOLIDAY": false,
+      "IS_SUNDAY_HOLIDAY": false
+    }
+  },
+  {
+    "model": "bookings.bookingsmodel",
+    "pk": "2d6d50ce-4f96-11f0-b216-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T18:24:47.431Z",
+      "core_generic_updated_at": "2025-06-22T18:24:47.431Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "client": "38f19082-4e96-11f0-bff9-46124d953699",
+      "slot": "09eac7ee-4f6e-11f0-b471-46124d953699",
+      "date_of_booking": "2025-06-22"
+    }
+  },
+  {
+    "model": "bookings.bookingsmodel",
+    "pk": "57ccb708-4f8f-11f0-8cca-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T17:35:52.043Z",
+      "core_generic_updated_at": "2025-06-22T17:35:52.043Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "client": "911b0e18-4e83-11f0-99c6-46124d953699",
+      "slot": "09eac7ee-4f6e-11f0-b471-46124d953699",
+      "date_of_booking": "2025-06-22"
+    }
+  },
+  {
+    "model": "bookings.bookingsmodel",
+    "pk": "edc89a10-4f9e-11f0-a9c7-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T19:27:26.126Z",
+      "core_generic_updated_at": "2025-06-22T19:27:26.126Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "client": "38f19082-4e96-11f0-bff9-46124d953699",
+      "slot": "13bb2872-4f6e-11f0-b471-46124d953699",
+      "date_of_booking": "2025-06-23"
+    }
+  },
+  {
+    "model": "classes.classesmodel",
+    "pk": "bf0ec4c0-4f6b-11f0-b7c0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:21:03.401Z",
+      "core_generic_updated_at": "2025-06-22T13:21:03.401Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "title": "Yoga",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \r\n\r\nIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+    }
+  },
+  {
+    "model": "classes.classesmodel",
+    "pk": "c6d9072e-4f6b-11f0-b7c0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:21:16.470Z",
+      "core_generic_updated_at": "2025-06-22T13:21:16.470Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "title": "Zumba",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \r\n\r\nIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+    }
+  },
+  {
+    "model": "classes.classesmodel",
+    "pk": "cdfe81a0-4f6b-11f0-b7c0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:21:28.460Z",
+      "core_generic_updated_at": "2025-06-22T13:21:28.460Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "title": "HIIT",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \r\n\r\nIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+    }
+  },
+  {
+    "model": "classes.classassignedinstructormodel",
+    "pk": "7b09d17e-4f6c-11f0-b7c0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:26:18.785Z",
+      "core_generic_updated_at": "2025-06-22T13:26:18.785Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "instructor": "0348841e-4f6c-11f0-b7c0-46124d953699",
+      "classes": "bf0ec4c0-4f6b-11f0-b7c0-46124d953699",
+      "week_days_off": "91f3217a-4f6b-11f0-b7c0-46124d953699"
+    }
+  },
+  {
+    "model": "classes.classassignedinstructormodel",
+    "pk": "c3e19a1c-4f6c-11f0-bd7d-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:28:20.995Z",
+      "core_generic_updated_at": "2025-06-22T13:28:20.995Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "instructor": "0b048fcc-4f6c-11f0-b7c0-46124d953699",
+      "classes": "c6d9072e-4f6b-11f0-b7c0-46124d953699",
+      "week_days_off": "91f3217a-4f6b-11f0-b7c0-46124d953699"
+    }
+  },
+  {
+    "model": "classes.classassignedinstructormodel",
+    "pk": "d1858d90-4f6c-11f0-bd7d-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:28:43.881Z",
+      "core_generic_updated_at": "2025-06-22T13:28:43.881Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "instructor": "12afe00a-4f6c-11f0-b7c0-46124d953699",
+      "classes": "cdfe81a0-4f6b-11f0-b7c0-46124d953699",
+      "week_days_off": "a1e67ee2-4f6b-11f0-b7c0-46124d953699"
+    }
+  },
+  {
+    "model": "slots.slottimigsmodel",
+    "pk": "0c6d5bea-4f68-11f0-b842-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T12:54:35.218Z",
+      "core_generic_updated_at": "2025-06-22T12:54:35.218Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "start_time": "09:00:00",
+      "end_time": "10:00:00",
+      "max_no_of_attendies": 1
+    }
+  },
+  {
+    "model": "slots.slottimigsmodel",
+    "pk": "23854986-4f69-11f0-b7c0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:02:23.459Z",
+      "core_generic_updated_at": "2025-06-22T13:02:23.459Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "start_time": "11:00:00",
+      "end_time": "12:00:00",
+      "max_no_of_attendies": 1
+    }
+  },
+  {
+    "model": "slots.slottimigsmodel",
+    "pk": "337ec2f2-4f6b-11f0-b7c0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:17:09.253Z",
+      "core_generic_updated_at": "2025-06-22T13:17:09.253Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "start_time": "16:00:00",
+      "end_time": "17:00:00",
+      "max_no_of_attendies": 1
+    }
+  },
+  {
+    "model": "slots.slottimigsmodel",
+    "pk": "59c73746-4f6b-11f0-b7c0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:18:13.482Z",
+      "core_generic_updated_at": "2025-06-22T13:18:13.482Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "start_time": "17:00:00",
+      "end_time": "18:00:00",
+      "max_no_of_attendies": 1
+    }
+  },
+  {
+    "model": "slots.slottimigsmodel",
+    "pk": "62616df4-4f6b-11f0-b7c0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:18:27.914Z",
+      "core_generic_updated_at": "2025-06-22T13:18:27.914Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "start_time": "18:00:00",
+      "end_time": "19:00:00",
+      "max_no_of_attendies": 1
+    }
+  },
+  {
+    "model": "slots.slottimigsmodel",
+    "pk": "7148e0f4-4f6b-11f0-b7c0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:18:52.919Z",
+      "core_generic_updated_at": "2025-06-22T13:18:52.919Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "start_time": "19:00:00",
+      "end_time": "20:00:00",
+      "max_no_of_attendies": 1
+    }
+  },
+  {
+    "model": "slots.slottimigsmodel",
+    "pk": "c2e28b48-4f68-11f0-b7c0-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T12:59:41.334Z",
+      "core_generic_updated_at": "2025-06-22T12:59:49.928Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "start_time": "10:00:00",
+      "end_time": "11:00:00",
+      "max_no_of_attendies": 1
+    }
+  },
+  {
+    "model": "slots.slottimigsmodel",
+    "pk": "d27f33b8-4f67-11f0-b842-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T12:52:58.031Z",
+      "core_generic_updated_at": "2025-06-22T12:52:58.031Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "start_time": "06:00:00",
+      "end_time": "07:00:00",
+      "max_no_of_attendies": 2
+    }
+  },
+  {
+    "model": "slots.slottimigsmodel",
+    "pk": "e7fad206-4f67-11f0-b842-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T12:53:34.069Z",
+      "core_generic_updated_at": "2025-06-22T12:54:07.849Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "start_time": "07:00:00",
+      "end_time": "08:00:00",
+      "max_no_of_attendies": 2
+    }
+  },
+  {
+    "model": "slots.slottimigsmodel",
+    "pk": "f54fb5fc-4f67-11f0-b842-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T12:53:56.436Z",
+      "core_generic_updated_at": "2025-06-22T12:53:56.436Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "start_time": "08:00:00",
+      "end_time": "09:00:00",
+      "max_no_of_attendies": 1
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "09eac7ee-4f6e-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:37:27.992Z",
+      "core_generic_updated_at": "2025-06-22T13:37:27.992Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "d1858d90-4f6c-11f0-bd7d-46124d953699",
+      "slot_id": "d27f33b8-4f67-11f0-b842-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "0d69f8cc-4f6e-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:37:33.856Z",
+      "core_generic_updated_at": "2025-06-22T13:37:33.856Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "d1858d90-4f6c-11f0-bd7d-46124d953699",
+      "slot_id": "e7fad206-4f67-11f0-b842-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "109e46c4-4f6e-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:37:39.232Z",
+      "core_generic_updated_at": "2025-06-22T13:37:39.232Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "d1858d90-4f6c-11f0-bd7d-46124d953699",
+      "slot_id": "f54fb5fc-4f67-11f0-b842-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "13bb2872-4f6e-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:37:44.454Z",
+      "core_generic_updated_at": "2025-06-22T13:37:44.454Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "d1858d90-4f6c-11f0-bd7d-46124d953699",
+      "slot_id": "0c6d5bea-4f68-11f0-b842-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "18248a2a-4f6e-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:37:51.856Z",
+      "core_generic_updated_at": "2025-06-22T13:37:51.856Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "d1858d90-4f6c-11f0-bd7d-46124d953699",
+      "slot_id": "c2e28b48-4f68-11f0-b7c0-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "acc407ec-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:34:51.709Z",
+      "core_generic_updated_at": "2025-06-22T13:34:51.709Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "7b09d17e-4f6c-11f0-b7c0-46124d953699",
+      "slot_id": "d27f33b8-4f67-11f0-b842-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "b1ab675a-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:34:59.937Z",
+      "core_generic_updated_at": "2025-06-22T13:34:59.937Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "7b09d17e-4f6c-11f0-b7c0-46124d953699",
+      "slot_id": "e7fad206-4f67-11f0-b842-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "b594e706-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:35:06.499Z",
+      "core_generic_updated_at": "2025-06-22T13:35:06.499Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "7b09d17e-4f6c-11f0-b7c0-46124d953699",
+      "slot_id": "f54fb5fc-4f67-11f0-b842-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "b927249c-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:35:12.490Z",
+      "core_generic_updated_at": "2025-06-22T13:35:12.490Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "7b09d17e-4f6c-11f0-b7c0-46124d953699",
+      "slot_id": "c2e28b48-4f68-11f0-b7c0-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "bd1862d2-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:35:19.103Z",
+      "core_generic_updated_at": "2025-06-22T13:35:19.104Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "7b09d17e-4f6c-11f0-b7c0-46124d953699",
+      "slot_id": "59c73746-4f6b-11f0-b7c0-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "c00eb34c-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:35:24.073Z",
+      "core_generic_updated_at": "2025-06-22T13:35:24.073Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "7b09d17e-4f6c-11f0-b7c0-46124d953699",
+      "slot_id": "62616df4-4f6b-11f0-b7c0-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "c2ba48d6-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:35:28.553Z",
+      "core_generic_updated_at": "2025-06-22T13:35:28.553Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "7b09d17e-4f6c-11f0-b7c0-46124d953699",
+      "slot_id": "7148e0f4-4f6b-11f0-b7c0-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "eafb8594-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:36:36.090Z",
+      "core_generic_updated_at": "2025-06-22T13:36:36.090Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "c3e19a1c-4f6c-11f0-bd7d-46124d953699",
+      "slot_id": "d27f33b8-4f67-11f0-b842-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "eee87004-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:36:42.677Z",
+      "core_generic_updated_at": "2025-06-22T13:36:42.677Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "c3e19a1c-4f6c-11f0-bd7d-46124d953699",
+      "slot_id": "e7fad206-4f67-11f0-b842-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "f155541a-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:36:46.745Z",
+      "core_generic_updated_at": "2025-06-22T13:36:46.745Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "c3e19a1c-4f6c-11f0-bd7d-46124d953699",
+      "slot_id": "f54fb5fc-4f67-11f0-b842-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "f5b8299c-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:36:54.103Z",
+      "core_generic_updated_at": "2025-06-22T13:36:54.103Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "c3e19a1c-4f6c-11f0-bd7d-46124d953699",
+      "slot_id": "0c6d5bea-4f68-11f0-b842-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "fa3ca560-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:37:01.683Z",
+      "core_generic_updated_at": "2025-06-22T13:37:01.683Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "c3e19a1c-4f6c-11f0-bd7d-46124d953699",
+      "slot_id": "62616df4-4f6b-11f0-b7c0-46124d953699"
+    }
+  },
+  {
+    "model": "slots.assignedslotstimingstoclassesmodel",
+    "pk": "fcfbf1fc-4f6d-11f0-b471-46124d953699",
+    "fields": {
+      "core_generic_created_at": "2025-06-22T13:37:06.293Z",
+      "core_generic_updated_at": "2025-06-22T13:37:06.293Z",
+      "core_generic_created_by": null,
+      "core_generic_updated_by": null,
+      "class_id": "c3e19a1c-4f6c-11f0-bd7d-46124d953699",
+      "slot_id": "7148e0f4-4f6b-11f0-b7c0-46124d953699"
+    }
+  }
+]
