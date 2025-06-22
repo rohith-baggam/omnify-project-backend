@@ -53,5 +53,6 @@ swagger_urlpatterns = [
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("userauth/", include("userauth.urls")),
+    path("store/", include("store.urls")),
     *swagger_urlpatterns,
 ]
